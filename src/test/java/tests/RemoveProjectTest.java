@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 
-public class RemoveProjectTest extends BaseTest{
+public class RemoveProjectTest extends BaseTest {
 
     final String PROJECT_NAME = "ProjectDemo";
     final String PROJECT_CODE = "DemoCode";
@@ -18,7 +18,7 @@ public class RemoveProjectTest extends BaseTest{
     ProjectPage projectsPage = new ProjectPage();
 
     @Test
-    public void removeProjectAndCheck(){
+    public void removeProjectAndCheck() {
         loginPage.login(User.testUser().login(), User.testUser().password());
         projectsPage.createNewProject(PROJECT_NAME, PROJECT_CODE);
         projectsPage.openProjectPage();

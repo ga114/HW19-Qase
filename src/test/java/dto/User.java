@@ -1,9 +1,9 @@
 package dto;
 
 public record User(String login,
-                   String password){
+                   String password) {
 
-    public static User testUser(){
+    public static User testUser() {
         return new User(
                 "gorev1995andrey@gmail.com",
                 "gorev1995andrey");

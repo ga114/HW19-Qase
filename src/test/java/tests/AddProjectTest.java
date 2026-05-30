@@ -2,11 +2,12 @@ package tests;
 
 import dto.User;
 import org.testng.annotations.Test;
-import pages.*;
+import pages.LoginPage;
+import pages.ProjectPage;
 
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.$;
 
 public class AddProjectTest extends BaseTest {
 
@@ -17,7 +18,7 @@ public class AddProjectTest extends BaseTest {
     ProjectPage projectsPage = new ProjectPage();
 
     @Test
-            public void checkCreateProject(){
+    public void checkCreateProject() {
 
         loginPage.login(User.testUser().login(), User.testUser().password());
         projectsPage.createNewProject(PROJECT_NAME, PROJECT_CODE);
